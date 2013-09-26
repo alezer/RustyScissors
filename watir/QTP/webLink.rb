@@ -7,6 +7,21 @@ module Watir
 	self.orig_click()
       end
     end
+
+    def getROProperty (property)
+      case property.downcase
+        when 'text'
+          return self.text()
+      end
+    end
     
+    def verifyValue (value)
+	if self.text() == value then
+		return true
+	else
+		return false
+	end
+    end
+
   end
 end
